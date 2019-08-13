@@ -17,6 +17,7 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {
+    "pet": "^1.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
