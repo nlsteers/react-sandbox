@@ -1,7 +1,7 @@
 {
   "name": "learn-react-v5",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo project for learning React",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -12,7 +12,11 @@
   "author": "Nathaniel Steers",
   "license": "ISC",
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
     "cross-env": "^5.2.1",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
@@ -25,6 +29,7 @@
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
+    "@reach/router": "^1.2.1",
     "pet": "^1.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
