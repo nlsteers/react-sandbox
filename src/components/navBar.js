@@ -14,6 +14,7 @@ const NavBar = () => (
 		css={css`
 			background-color: ${colours.secondary};
 			padding: 15px;
+			margin-bottom: 25px;
 		`}
 	>
 		<Link to="/">Adopt me!</Link>

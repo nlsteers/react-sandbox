@@ -4,13 +4,13 @@ import ThemeContext from "./themeContext";
 const ThemeSelect = () => {
   const [theme, setTheme] = useContext(ThemeContext);
   return (
-    <div className="details">
+    <div className="theme">
       <label htmlFor="theme">
         Theme: &nbsp;
         <select
           value={theme}
-          onChange={e => setTheme(e.target.value)}
-          onBlur={e => setTheme(e.target.value)}
+          onChange={(e) => setTheme(e.target.value)}
+          onBlur={(e) => setTheme(e.target.value)}
         >
           <option value="peru">Peru</option>
           <option value="darkblue">Dark Blue</option>
