@@ -4,8 +4,7 @@ import { createPortal } from "react-dom";
 const Modal = ({ children }) => {
   const elRef = useRef(null);
   if (!elRef.current) {
-    const div = document.createElement("div");
-    elRef.current = div;
+    elRef.current = document.createElement("div");
   }
 
   useEffect(() => {
