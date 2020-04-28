@@ -9,21 +9,20 @@ const useDropdown = (label, defaultState, options) => {
       <select
         id={id}
         value={state}
-        onChange={e => setState(e.target.value)}
-        onBlur={e => setState(e.target.value)}
+        onChange={(e) => setState(e.target.value)}
+        onBlur={(e) => setState(e.target.value)}
         disabled={options.length === 0}
       >
-      <option>All</option>
-      {options.map(item => (
+        <option>All</option>
+        {options.map((item) => (
           <option key={item} value={item}>
-          {item}
+            {item}
           </option>
         ))}
       </select>
-
     </label>
   );
-  return [state, dropDown, setState]
+  return [state, dropDown, setState];
 };
 
 export default useDropdown;

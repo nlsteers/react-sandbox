@@ -17,7 +17,7 @@ class Details extends React.Component {
   // can all be replaced by:
   state = {
     loading: true,
-    showModal: false
+    showModal: false,
   };
   // when transpiling with babel experimental features, see babelrc and eslintrc
 
@@ -31,14 +31,14 @@ class Details extends React.Component {
         description: animal.description,
         media: animal.photos,
         breed: animal.breeds.primary,
-        loading: false
+        loading: false,
       });
     }, console.error);
   }
 
   toggleModal = () => {
     this.setState({
-      showModal: !this.state.showModal
+      showModal: !this.state.showModal,
     });
   };
 
@@ -61,7 +61,7 @@ class Details extends React.Component {
       description,
       name,
       media,
-      showModal
+      showModal,
     } = this.state;
 
     return (

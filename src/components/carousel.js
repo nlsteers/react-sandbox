@@ -3,7 +3,7 @@ import React from "react";
 class Carousel extends React.Component {
   state = {
     photos: [],
-    active: 0
+    active: 0,
   };
 
   static getDerivedStateFromProps({ media }) {
@@ -16,9 +16,9 @@ class Carousel extends React.Component {
     return { photos };
   }
 
-  handleIndexClick = event => {
+  handleIndexClick = (event) => {
     this.setState({
-      active: +event.target.dataset.index
+      active: +event.target.dataset.index,
     });
   };
 
@@ -29,7 +29,6 @@ class Carousel extends React.Component {
         <img src={photos[active]} alt="animal" />
         <div className="carousel-smaller">
           {photos.map((photo, index) => (
-            // eslint-disable-next-line
             <img
               key={photo}
               onClick={this.handleIndexClick}

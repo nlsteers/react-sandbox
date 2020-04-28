@@ -19,3 +19,4 @@ export default function Pet({ name, animal, breed, media, location, id }) {
     </Link>
   );
 }
+ 

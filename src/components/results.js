@@ -5,9 +5,9 @@ const Results = ({ pets }) => {
   return (
     <div className="search">
       {pets.length === 0 ? (
-        <h1>No results</h1>
+        <p>No results</p>
       ) : (
-        pets.map(pet => (
+        pets.map((pet) => (
           <Pet
             key={pet.id}
             animal={pet.type}

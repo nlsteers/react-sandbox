@@ -1,4 +1,3 @@
-/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import React, { useState, useEffect, useContext } from "react";
 import pet, { ANIMALS } from "@frontendmasters/pet";
 import useDropdown from "./useDropdown";
@@ -17,7 +16,7 @@ const SearchParams = () => {
     const { animals } = await pet.animals({
       location,
       breed,
-      type: animal
+      type: animal,
     });
     setPets(animals || []);
   }
@@ -37,7 +36,7 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           requestPets();
         }}
@@ -48,7 +47,7 @@ const SearchParams = () => {
             id="location"
             value={location}
             placeholder="Location"
-            onChange={e => {
+            onChange={(e) => {
               setLocation(e.target.value);
             }}
           ></input>
