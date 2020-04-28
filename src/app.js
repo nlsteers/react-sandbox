@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import SearchParams from "./components/searchParams";
-import Details from "./components/details";
 import ThemeContext from "./components/themeContext";
 import ThemeSelect from "./components/themeSelect";
+import NavBar from "./components/navBar";
+
+const Details = lazy(() => import("./components/details"));
 
 const App = () => {
   const theme = useState("peru");
   return (
     <ThemeContext.Provider value={theme}>
       <div>
-        <header>
-          <Link to="/">Adopt Me!</Link>
-        </header>
         <ThemeSelect />
-        <Router>
-          <SearchParams path="/" />
-          <Details path="/details/:id" />
-        </Router>
+        <NavBar />
+        <Suspense fallback={<p>loading route...</p>}>
+          <Router>
+            <SearchParams path="/" />
+            <Details path="/details/:id" />
+          </Router>
+        </Suspense>
       </div>
     </ThemeContext.Provider>
   );

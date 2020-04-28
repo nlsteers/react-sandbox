@@ -46,6 +46,13 @@ h1.logo-type {
   margin-bottom: 25px;
 }
 
+.theme {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #d9c148;
+  padding: 15px;
+}
+
 .pet {
   width: 100%;
   height: 130px;
